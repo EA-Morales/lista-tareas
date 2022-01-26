@@ -1,5 +1,19 @@
-<app-tasks-items *ngFor="let task of tasks" [task]="task">
+<div>
 
-    {{ task.text }}
+    <div class="d-flex justify-content-between p-2">
 
-</app-tasks-items>
+        <h1>Lista de tareas</h1>
+
+        <button class="btn btn-success btn-sm">Add Task</button>
+
+    </div>
+
+    <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+
+
+    <app-tasks-items *ngFor="let task of tasks" [task]="task" (onToggleReminder)="toggleReminder(task)" (onDeleteTask)="deleteTask(task)">
+
+
+    </app-tasks-items>
+
+</div>

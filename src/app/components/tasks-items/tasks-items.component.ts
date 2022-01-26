@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 // interface mockup
 import { Task } from '../../task';
@@ -11,8 +11,18 @@ import { TASKS } from '../../mock-tasks';
 })
 export class TasksItemsComponent implements OnInit {
   @Input() task: Task = TASKS[0];
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(task: Task) {
+    this.onDeleteTask.emit(task);
+  }
+
+  onToggle(task: Task) {
+    this.onToggleReminder.emit(task);
+  }
 }
