@@ -2,20 +2,8 @@
   "tasks": [
     {
       "id": 1,
-      "text": "primer tarea",
-      "date": "2022-01-27",
-      "reminder": true
-    },
-    {
-      "id": 2,
-      "text": "segunda tarea",
-      "date": "2022-01-27",
-      "reminder": true
-    },
-    {
-      "id": 3,
-      "text": "tercera tarea",
-      "date": "2022-01-27",
+      "text": "Hola mundo",
+      "date": "2022-01-26",
       "reminder": true
     }
   ]

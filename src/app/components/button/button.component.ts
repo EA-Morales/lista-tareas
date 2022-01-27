@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { UiService } from 'src/app/service/ui.service';
 
 @Component({
   selector: 'app-button',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
+  @Input() text: string = '';
+
   @Output() btn_addtask_click = new EventEmitter();
 
   constructor() {}
